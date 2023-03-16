@@ -1,3 +1,4 @@
+
 a(name="main")
 main.content
  article 
@@ -32,20 +33,21 @@ main.content
           option Квітка2
       label Кількість
         input(type="number" name="flower_count" id="flower_count" min="0" max="50" value="5") 
-      h3 Вартість
-      button(type="submit") Додати до букету
+      h3(id="price_flowers") Вартість
+      button(type="button" id="calc_forwers") Додати до букету
     fieldset 
       legend Додати аксесуари
       label Аксесуар
-        select(name="aks" id="akc")
+        select(name="aks" id="aks")
           option Аксесуар1
           option Аксесуар2
       label Кількість
         input(type="number" name="aks_count" id="aks_count" min="0" max="50" value="5") 
-      h3 Вартість
-      button(type="submit") Додати до букету
+      h3(id="price_aks") Вартість
+      button(type="button" id="calc_aks") Додати до букету
   h2 Букет
-  h3 Квітка та кількість
-  h3 Загальна
+  h3(id="all_Flowers") Квітка та кількість
+  h3(id="all_price_flower") Загальна
   a(href="#").buy_now Купити зараз
+
   

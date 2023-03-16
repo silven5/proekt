@@ -14,9 +14,9 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: 'index.[contenthash].js',
+      filename: 'index.js',
       // Налаштування для картинок. Зображення будуть зберігатися у папці images
-      assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+      assetModuleFilename: path.join('images', '[name].[ext]'),
     },
      // Створили об'єкт module, для якого задали правило rules
     // Тут для всіх модулів (читай, файлів) з розширенням .js
@@ -33,7 +33,7 @@ module.exports = {
        test: /\.(woff2?|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
-            filename: path.join('fonts', '[name].[contenthash][ext]'),
+            filename: path.join('fonts', '[name].[ext]'),
           }
      },
       // Правила для зображень
@@ -46,7 +46,7 @@ module.exports = {
         test: /\.svg$/,
         type: 'asset/resource',
         generator: {
-          filename: path.join('icons', '[name].[contenthash][ext]'),
+          filename: path.join('icons', '[name].[ext]'),
         },
        },
             {
